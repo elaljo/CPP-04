@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:25:27 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/29 18:29:26 by moelalj          ###   ########.fr       */
+/*   Updated: 2023/12/29 19:10:00 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ std::string Contact::getdarkest_secret()
 std::string  Contact::save_input(std::string msg)
 {
 	std::string line;
+	std::string g_line;
+	
 	while (1)
 	{
 		std::cout << msg;
@@ -87,6 +89,11 @@ std::string  Contact::save_phonenumber(std::string msg)
 		if (IsNumeric(line) == 0)
 		{
 			std::cout << "Please enter a correct Phonenumber.." << std::endl;
+			continue;
+		}
+		else if (line.length() != 10)
+		{
+			std::cout << "Phonenumber need 10 numbers to be valid" << std::endl;
 			continue;
 		}
 		if (!line.empty())
