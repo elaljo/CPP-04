@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:19:12 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/29 17:03:21 by moelalj          ###   ########.fr       */
+/*   Updated: 2023/12/31 19:54:05 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ using std::endl ;
 class PhoneBook
 {
 	private:
-		Contact contacts[8];
+		Contact contacts[2];
 		int i;
 	public:
 		PhoneBook();

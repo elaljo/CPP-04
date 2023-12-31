@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:49:10 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/31 16:22:29 by moelalj          ###   ########.fr       */
+/*   Updated: 2023/12/31 21:29:48 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,33 +55,50 @@ void	PhoneBook::prompt_give_an_index()
 {
 	std::string input_s;
 	int input_d;
+	int c;
 	
 	while (1)
 	{
-		if (i == 0)
+		c = i;
+		if (c == 0)
 		{
 			std::cout << "Sorry your phonebook is empty, Please add new contacts." << std::endl;
 			break;
 		}
 		std::cout << "Enter an index from 0->7 to display contact's informations: " << std::endl;
 		std::getline(std::cin, input_s);
-		input_d = std::stod(input_s);
+		try{
+			input_d = std::stoi(input_s);}
+			catch(const std::out_of_range){
+				std::cerr << "Out of range - accepts only data type: int"<< std::endl;
+				continue;
+			}
+			catch(const std::invalid_argument){
+				std::cerr << "Enter only numbers !!" << std::endl;
+				continue;
+			}
 		if (input_d > 7)
 		{
-			std::cout << "The index is out of range !!" << std::endl;
+			std::cout << "The index is out of contact's range !!" << std::endl;
 			continue;
 		}
 		else if (input_d < 0)
 		{
-			std::cerr << "No negative numbers!DUMB!" << std::endl;
+			std::cerr << "No negative numbers !DUMB!" << std::endl;
 			continue;
 		}
-		if (input_d !=  i - 1)
+		while (c)
+		{
+			if (input_d ==  c - 1)
+				break;
+			c--;
+		}
+		if (input_d != c - 1)
 			std::cout << "Can't found index contact - Not enough contact's members yet" << std::endl;
 		else
 		{
-			PhoneBook::Diplay_index_infos(i - 1);
-			break ;
+			PhoneBook::Diplay_index_infos(input_d);
+			break;
 		}
 	}
 }
