@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:49:10 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/31 15:19:05 by moelalj          ###   ########.fr       */
+/*   Updated: 2023/12/31 16:22:29 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,34 +55,33 @@ void	PhoneBook::prompt_give_an_index()
 {
 	std::string input_s;
 	int input_d;
-	int	c;
 	
 	while (1)
 	{
-		c = i;
+		if (i == 0)
+		{
+			std::cout << "Sorry your phonebook is empty, Please add new contacts." << std::endl;
+			break;
+		}
 		std::cout << "Enter an index from 0->7 to display contact's informations: " << std::endl;
 		std::getline(std::cin, input_s);
 		input_d = std::stod(input_s);
-		if (input_d >= 8)
+		if (input_d > 7)
 		{
 			std::cout << "The index is out of range !!" << std::endl;
 			continue;
 		}
 		else if (input_d < 0)
 		{
-			std::cout << "No negative numbers!DUMB!" << std::endl;
+			std::cerr << "No negative numbers!DUMB!" << std::endl;
 			continue;
 		}
-		while (c)
-		{
-			c--;
-			if (input_d == c)
-				break;
-		}
-		if (input_d != c)
+		if (input_d !=  i - 1)
 			std::cout << "Can't found index contact - Not enough contact's members yet" << std::endl;
 		else
-			break;
+		{
+			PhoneBook::Diplay_index_infos(i - 1);
+			break ;
+		}
 	}
-	PhoneBook::Diplay_index_infos(c);
 }
