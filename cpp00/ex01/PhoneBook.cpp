@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:49:10 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/02 14:53:43 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/02 15:35:29 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ void	PhoneBook::Display_saved_contacts()
 	{
 		std::cout << "*------------------------------------------*" << std::endl;
 		std::cout << j << std::setw(10) << "|";
-		if (contacts[j].getfirstname().length() >= 10)
+		if (contacts[j].getfirstname().length() > 10)
 			std::cout << contacts[j].getfirstname().substr(0,9) << "." << "|";
 		else
 			std::cout << contacts[j].getfirstname() << std::setw(10 - contacts[j].getfirstname().length() + 1) << "|";
-		if (contacts[j].getlastname().length() >= 10)
+		if (contacts[j].getlastname().length() > 10)
 			std::cout << contacts[j].getlastname().substr(0,9) << "." << "|";
 		else
 			std::cout << contacts[j].getlastname() << std::setw(10 - contacts[j].getlastname().length() + 1) << "|";
-		if (contacts[j].getnickname().length() >= 10)
+		if (contacts[j].getnickname().length() > 10)
 			std::cout << contacts[j].getnickname().substr(0,9) << "." << "|" << std::endl;
 		else
 			std::cout << contacts[j].getnickname() << std::setw(10 - contacts[j].getnickname().length() + 1) << "|" << std::endl;
@@ -96,7 +96,7 @@ void	PhoneBook::prompt_give_an_index()
 			}
 		if (input_d > 7)
 		{
-			std::cout << "The index is out of contact's range !!" << std::endl;
+			std::cerr << "The index is out of contact's range !!" << std::endl;
 			continue;
 		}
 		else if (input_d < 0)
@@ -106,7 +106,7 @@ void	PhoneBook::prompt_give_an_index()
 		}
 		while (c)
 		{
-			if (input_d ==  c - 1)
+			if (input_d == c - 1)
 				break;
 			c--;
 		}
