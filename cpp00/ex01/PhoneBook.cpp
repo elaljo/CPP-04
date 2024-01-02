@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:49:10 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/31 21:29:48 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:53:43 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,18 @@ PhoneBook::PhoneBook()
 }
 void	PhoneBook::Addcontact(Contact& contact_n)
 {
-	if (i == 8)
-		i = 0;
-	contacts[i] = contact_n;
-	i++;
+	static int len;
+	
+	if (i > 7)
+	{
+		contacts[len % 8] = contact_n;
+		len++;
+	}
+	else
+	{
+		contacts[i] = contact_n;
+		i++;
+	}
 }
 
 void	PhoneBook::Display_saved_contacts()
@@ -34,10 +42,19 @@ void	PhoneBook::Display_saved_contacts()
 	while (j < i)
 	{
 		std::cout << "*------------------------------------------*" << std::endl;
-		std::cout << j << std::setw(10) << "|" 
-		<< contacts[j].getfirstname() << std::setw(10 - contacts[j].getfirstname().length() + 1) << "|"
-		<< contacts[j].getlastname() << std::setw(10 - contacts[j].getlastname().length() + 1) << "|"
-		<< contacts[j].getnickname() << std::setw(10 - contacts[j].getnickname().length() + 1) << "|" << std::endl;
+		std::cout << j << std::setw(10) << "|";
+		if (contacts[j].getfirstname().length() >= 10)
+			std::cout << contacts[j].getfirstname().substr(0,9) << "." << "|";
+		else
+			std::cout << contacts[j].getfirstname() << std::setw(10 - contacts[j].getfirstname().length() + 1) << "|";
+		if (contacts[j].getlastname().length() >= 10)
+			std::cout << contacts[j].getlastname().substr(0,9) << "." << "|";
+		else
+			std::cout << contacts[j].getlastname() << std::setw(10 - contacts[j].getlastname().length() + 1) << "|";
+		if (contacts[j].getnickname().length() >= 10)
+			std::cout << contacts[j].getnickname().substr(0,9) << "." << "|" << std::endl;
+		else
+			std::cout << contacts[j].getnickname() << std::setw(10 - contacts[j].getnickname().length() + 1) << "|" << std::endl;
 		j++;
 	}
 	std::cout << "*------------------------------------------*" << std::endl;

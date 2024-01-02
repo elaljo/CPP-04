@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:19:12 by moelalj           #+#    #+#             */
-/*   Updated: 2023/12/31 19:54:05 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:47:32 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,10 @@
 #include <iomanip>
 #include "Contact.hpp"
 
-using std::cout ;
-using std::endl ;
-
 class PhoneBook
 {
 	private:
-		Contact contacts[2];
+		Contact contacts[8];
 		int i;
 	public:
 		PhoneBook();
