@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:25:27 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/02 15:23:33 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/04 14:05:16 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ std::string  Contact::save_input(std::string msg)
 	{
 		std::cout << msg;
 		std::getline(std::cin, line);
+		if (std::cin.eof())
+			exit(0);
 		if (!line.empty())
 			break;
 	}
@@ -85,6 +87,8 @@ std::string  Contact::save_phonenumber(std::string msg)
 	{
 		std::cout << msg;
 		std::getline(std::cin, line);
+		if (std::cin.eof())
+			exit(0);
 		if (IsNumeric(line) == 0)
 		{
 			std::cout << "Please enter a correct Phonenumber.." << std::endl;

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:49:10 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/02 15:35:29 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/04 14:04:41 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ void	PhoneBook::prompt_give_an_index()
 		}
 		std::cout << "Enter an index from 0->7 to display contact's informations: " << std::endl;
 		std::getline(std::cin, input_s);
+		if (std::cin.eof())
+			exit(0);
 		try{
 			input_d = std::stoi(input_s);}
 			catch(const std::out_of_range){

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 18:10:59 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/02 12:42:21 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/04 14:06:03 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main()
 		
 		std::cout << "Please Enter ADD to start adding your new members or SEARCH to start searching for them:" << std::endl;
 		std::getline(std::cin, input);
+		if (std::cin.eof())
+			exit(0);
 		if (input == "ADD")
 		{
 			contact.Addinfoscontact();
