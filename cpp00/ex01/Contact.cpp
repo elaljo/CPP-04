@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:25:27 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/04 14:05:16 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/04 16:56:14 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,9 +106,9 @@ std::string  Contact::save_phonenumber(std::string msg)
 }
 void	Contact::Addinfoscontact()
 {	
-	this->setfirstname(Contact::save_input("First name: "));
-	this->setlastname(Contact::save_input("Last name: "));
-	this->setnickname(Contact::save_input("Nickname: "));
-	this->setphonenumber(Contact::save_phonenumber("Phone number: "));
-	this->setdarkest_secret(Contact::save_input("Darkest secret: "));
+	setfirstname(Contact::save_input("First name: "));
+	setlastname(Contact::save_input("Last name: "));
+	setnickname(Contact::save_input("Nickname: "));
+	setphonenumber(Contact::save_phonenumber("Phone number: "));
+	setdarkest_secret(Contact::save_input("Darkest secret: "));
 }
