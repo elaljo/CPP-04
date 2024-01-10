@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:03:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/10 15:59:07 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/10 17:33:06 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ void	Zombie::announce(void)
 void	Zombie::set_name(std::string name)
 {
 	zombie_name = name;
+	std::cout << name << ": ";
+}
+
+Zombie::Zombie()
+{
+	zombie_name = "D";
 }
 Zombie::~Zombie()
 {
