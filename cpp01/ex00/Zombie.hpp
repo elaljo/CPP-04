@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:03:38 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/10 15:06:02 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:40:02 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie{
 		std::string zombie_name;
 	public:
 		void	announce(void);
+		void	set_name(std::string name);
 		~Zombie();
 };
 #endif
