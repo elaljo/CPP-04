@@ -1,22 +1,18 @@
-NAME = ZombieHorde
+NAME = BRAIN
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 g++ = c++
 
-HEADER = Zombie.hpp\
-
 RM = rm -rf
 
-SRC = main.cpp\
-			Zombie.cpp\
-			zombieHorde.cpp\
-			
+SRC = main.cpp
+
 OBJS := $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o:%.cpp $(HEADER)
+%.o:%.cpp
 	$(g++) $(CPPFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
