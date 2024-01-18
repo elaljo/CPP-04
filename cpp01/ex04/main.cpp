@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:10:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/12 17:10:30 by moelalj          ###   ########.fr       */
+/*   Created: 2024/01/16 15:53:36 by moelalj           #+#    #+#             */
+/*   Updated: 2024/01/17 21:04:07 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-void	Zombie::announce(void)
+int main(int argc, char* argv[])
 {
-	std::cout << "BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void	Zombie::set_name(std::string name)
-{
-	this->zombie_name = name;
-}
-
-Zombie::Zombie()
-{
-	std::cout << "[called constructor]" << std::endl;
-	zombie_name = "D";
-}
-Zombie::~Zombie()
-{
-	std::cout << "[called destructor]" << std::endl;
+	if (argc == 4)
+	{
+		
+	}
+	else
+		std::cout << "Bad parameters input.." << std::endl;
+	return (0);
 }

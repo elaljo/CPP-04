@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:10:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/12 17:10:30 by moelalj          ###   ########.fr       */
+/*   Created: 2024/01/12 16:34:06 by moelalj           #+#    #+#             */
+/*   Updated: 2024/01/16 15:38:06 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-void	Zombie::announce(void)
+int main()
 {
-	std::cout << "BraiiiiiiinnnzzzZ..." << std::endl;
+{
+	Weapon club = Weapon("crude spiked club");
+	HumanA bob("Bob", club);
+	bob.attack();
+	club.setType("some other type of club");
+	bob.attack();
 }
 
-void	Zombie::set_name(std::string name)
 {
-	this->zombie_name = name;
+	Weapon club = Weapon("crude spiked club");
+	HumanB jim("Jim");
+	jim.setWeapon(club);
+	jim.attack();
+	club.setType("some other type of club");
+	jim.attack();
 }
-
-Zombie::Zombie()
-{
-	std::cout << "[called constructor]" << std::endl;
-	zombie_name = "D";
-}
-Zombie::~Zombie()
-{
-	std::cout << "[called destructor]" << std::endl;
+	return 0;
 }

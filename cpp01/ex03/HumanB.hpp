@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:10:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/12 17:10:30 by moelalj          ###   ########.fr       */
+/*   Created: 2024/01/16 15:14:11 by moelalj           #+#    #+#             */
+/*   Updated: 2024/01/16 15:45:20 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-void	Zombie::announce(void)
-{
-	std::cout << "BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include "Weapon.hpp"
 
-void	Zombie::set_name(std::string name)
+class HumanB
 {
-	this->zombie_name = name;
-}
+private:
+	std::string name;
+	Weapon *weapon;
+public:
+	const std::string& getName() const;
+	void	setName(const std::string&);
+	void	setWeapon(Weapon);
+	void	attack();
+	HumanB(const std::string&);
+	HumanB();
+	~HumanB();
+};
 
-Zombie::Zombie()
-{
-	std::cout << "[called constructor]" << std::endl;
-	zombie_name = "D";
-}
-Zombie::~Zombie()
-{
-	std::cout << "[called destructor]" << std::endl;
-}
+#endif

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:40 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/11 14:58:55 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/12 17:07:11 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Zombie* zombieHorde(int N, std::string name)
 	while (i < N)
 	{
 		obj[i].set_name(name);
-		obj[i].announce();
 		i++;
 	}
 	return (obj);

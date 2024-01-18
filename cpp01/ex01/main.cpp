@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:22:18 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/11 15:17:24 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/12 17:10:02 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 int main()
 {
-	zombieHorde(3, "ana");
+	Zombie *obj = zombieHorde(6, "ana");
+	int i = 0;
+	while (i < 6)
+	{
+		obj[i].announce();
+		i++;
+	}
+	delete[] obj;
 	return (0);
 }
