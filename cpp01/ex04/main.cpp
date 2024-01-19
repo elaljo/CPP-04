@@ -6,18 +6,24 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:53:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/18 17:55:43 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/19 10:10:05 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
-void replace_method(std::string line, std::string s1, std::string s2)
+std::string replace(std::string line, std::string s1, std::string s2)
 {
-	std::cout << line << "hhhh" << std::endl;
-	std::cout << s1 << s2 << std::endl;
-	
+	int	i = 0;
+
+	while (line[i])
+	{
+		if (line[i] == s1[0])
+			line[i] = s2[0];
+		i++;
+	}
+	return (line);
 }
 int main(int argc, char* argv[])
 {
@@ -36,10 +42,12 @@ int main(int argc, char* argv[])
 			outputfile.open(replace_file);
 			if (outputfile.is_open())
 			{
+				std::string new_line;
+				
 				while (std::getline(inputfile, line))
 				{
-					replace_method(line, argv[2], argv[3]);
-					outputfile << line;
+					new_line = replace(line, argv[2], argv[3]);
+					outputfile << new_line;
 					outputfile << "\n";
 				}
 				outputfile.close();

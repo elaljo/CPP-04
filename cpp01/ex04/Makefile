@@ -6,15 +6,13 @@ g++ = c++
 
 RM = rm -rf
 
-HEADER =	Weapon.hpp\
-
 SRC = main.cpp\
 
 OBJS := $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o:%.cpp $(HEADER)
+%.o:%.cpp
 	$(g++) $(CPPFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
