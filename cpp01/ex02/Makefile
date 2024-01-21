@@ -1,4 +1,4 @@
-NAME = BRAIN
+NAME = Brain
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 

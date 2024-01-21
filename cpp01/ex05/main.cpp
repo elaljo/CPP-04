@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:48:41 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/19 20:04:32 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/19 20:23:37 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int main()
 { 
 	Harl obj;
 
-	obj.complain("WARNING");
+	obj.complain("ERROR");
 	return (0);
 }
