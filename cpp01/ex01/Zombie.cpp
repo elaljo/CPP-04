@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:10:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/21 18:38:28 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:40:15 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	Zombie::set_name(std::string name)
 
 Zombie::Zombie()
 {
-	zombie_name = "D";
+	zombie_name = "Default";
 	std::cout << "[called constructor]" << std::endl;
 }
 Zombie::~Zombie()

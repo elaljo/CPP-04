@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:03:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/16 14:49:36 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:27:56 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ Zombie::Zombie()
 }
 Zombie::~Zombie()
 {
-	std::cout << "[Called destructor...]" << std::endl;
+	std::cout << "[Called destructor]" << std::endl;
 }
