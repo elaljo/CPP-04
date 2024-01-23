@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:14:09 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/16 15:46:21 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/23 16:04:18 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,10 @@ HumanB::~HumanB()
 
 void	HumanB::attack()
 {
+	if (weapon == NULL)
+	{
+		std::cout << "weapon = null" << std::endl;
+		return ;
+	}
 	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }

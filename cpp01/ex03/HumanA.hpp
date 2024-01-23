@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:20:18 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/16 15:42:34 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/23 15:58:15 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
 	void	setName(const std::string &);
 	void	attack();
 	HumanA(const std::string&, Weapon&);
-	HumanA();
 	~HumanA();
 };
 

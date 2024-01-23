@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:48:37 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/19 19:57:05 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/23 16:01:46 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,12 @@ void	Harl::complain(std::string level)
 {
 		int i = 0;
   	std::string levels[4] = {"DEBUG", "ERROR", "WARNING", "INFO"};
-    typedef void (Harl::*func)();
-
-    func func_arr[4] = {&Harl::debug, &Harl::error, &Harl::warning, &Harl::info};
+    void (Harl::*func[4])() = {&Harl::debug, &Harl::error, &Harl::warning, &Harl::info};
 		while (i < 4)
     {
         if (levels[i] == level)
         {
-            (this->*func_arr[i])(); 
+            (this->*func[i])(); 
             return ;
         }
 				i++;
