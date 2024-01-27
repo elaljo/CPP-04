@@ -6,11 +6,21 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:32:34 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/27 23:36:55 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/27 23:49:27 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+float Fixed::toFloat(void) const
+{
+	
+}
+
+int Fixed::toInt(void) const
+{
+	
+}
 
 int Fixed::getRawBits(void) const
 {
@@ -37,6 +47,14 @@ Fixed::Fixed(const Fixed& copy)
 {
 	*this = copy;
 	std::cout << "Copy constructor called" << std::endl;
+}
+Fixed::Fixed(const int number)
+{
+	std::cout << "Int constructor called" << std::endl;
+}
+Fixed::Fixed(const float number)
+{
+	std::cout << "Float constructor called" << std::endl;
 }
 Fixed::Fixed():save_fp(0)
 {
