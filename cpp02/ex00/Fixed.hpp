@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 13:34:49 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/26 18:12:14 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/27 21:42:41 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@
 class Fixed{
 	private:
 		int save_fp;
-		static const int exponent;
+		static const int save_fractional_bits = 8;
 	public:
-		Fixed(const Fixed&);
 		Fixed();
+		Fixed(const Fixed& copy);
+		Fixed& operator=(const Fixed& copy);
 		~Fixed();
+		int getRawBits(void) const;
+		void	setRawBits(int const raw);
 };
 #endif
