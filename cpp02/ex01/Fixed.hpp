@@ -6,14 +6,14 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:32:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/27 23:48:27 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/28 16:52:28 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
-
 #include <iostream>
+#include <string>
 #include <cmath>
 
 class Fixed{
@@ -23,7 +23,7 @@ class Fixed{
 	public:
 		Fixed();
 		Fixed(const int number);
-		Fixed(const float);
+		Fixed(const float number);
 		Fixed(const Fixed& copy);
 		Fixed& operator=(const Fixed& copy);
 		~Fixed();
@@ -32,4 +32,5 @@ class Fixed{
 		int getRawBits(void) const;
 		void	setRawBits(int const raw);
 };
+	std::ostream& operator<<(std::ostream& cout, const Fixed& copy); 
 #endif
