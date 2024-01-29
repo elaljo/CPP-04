@@ -6,14 +6,14 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:32:34 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/28 18:28:49 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/29 16:35:45 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 float Fixed::toFloat(void) const
-{
+{ 
 	return (float(save_fp) / (1 << save_fractional_bits));
 }
 
@@ -27,7 +27,6 @@ std::ostream&	operator<<(std::ostream& cout, const Fixed& copy)
     cout << copy.toFloat();
     return (cout);
 }
-
 
 int Fixed::getRawBits(void) const
 {

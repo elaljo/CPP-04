@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:32:36 by moelalj           #+#    #+#             */
-/*   Updated: 2024/01/28 16:52:28 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/01/29 16:08:38 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ class Fixed{
 		int getRawBits(void) const;
 		void	setRawBits(int const raw);
 };
-	std::ostream& operator<<(std::ostream& cout, const Fixed& copy); 
+	 std::ostream& operator<<(std::ostream& cout, const Fixed& copy); 
 #endif
