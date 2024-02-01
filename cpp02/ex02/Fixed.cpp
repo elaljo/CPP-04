@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:24:41 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 19:58:09 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 20:13:36 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,19 @@ Fixed Fixed::operator--(int)
 	save_fp--;
 	return (tmp.toFloat());
 }
+Fixed Fixed::min(const Fixed &n1, const Fixed &n2)
+{
+	if (n1 > n2)
+		return n2;
+	return n1;
+}
 
+Fixed Fixed::max(const Fixed &n1, const Fixed &n2)
+{
+	if (n1 > n2)
+		return n1;
+	return n2;
+}
 int Fixed::getRawBits(void) const
 {
 	return (save_fp);

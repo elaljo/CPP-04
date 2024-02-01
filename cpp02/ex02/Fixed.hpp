@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:02:20 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 20:03:32 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 20:13:27 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ class Fixed{
 			//post-fix
 		Fixed operator++(int);
 		Fixed operator--(int);
+		static Fixed	min(const Fixed&,const Fixed&);
+		static Fixed	max(const Fixed&,const Fixed&);
 		int getRawBits(void) const;
 		void	setRawBits(int const raw);
 };

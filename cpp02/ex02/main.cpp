@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:01:34 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 19:57:58 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 20:14:00 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main( void )
 {
 	Fixed a;
-	Fixed const b( Fixed( 5.05f ) + Fixed( 2 ) );
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;
@@ -25,7 +25,7 @@ int main( void )
 	
 	std::cout << b << std::endl;
 
-	//std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::min( a, b ) << std::endl;
 	
 	return (0);
 }
