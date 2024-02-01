@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:24:41 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 17:16:10 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 18:13:58 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,44 @@ std::ostream& operator<<(std::ostream& cout, const Fixed& copy)
 	cout << copy.toFloat();
 	return (cout);
 }
+
+bool	Fixed::operator>(const Fixed &rhs) const
+{
+	if (toFloat() > rhs.toFloat())
+		return true;
+	return false;
+}
+bool	Fixed::operator<(const Fixed &rhs) const
+{
+	if (toFloat() < rhs.toFloat())
+		return true;
+	return false;
+}
+bool	Fixed::operator>=(const Fixed &rhs) const
+{
+	if (toFloat() >= rhs.toFloat())
+		return true;
+	return false;
+}
+bool	Fixed::operator<=(const Fixed &rhs) const
+{
+	if (toFloat() <= rhs.toFloat())
+		return true;
+	return false;
+}
+bool	Fixed::operator==(const Fixed &rhs) const
+{
+	if (toFloat() == rhs.toFloat())
+		return true;
+	return false;
+}
+bool	Fixed::operator!=(const Fixed &rhs) const
+{
+	if (toFloat() != rhs.toFloat())
+		return true;
+	return false;
+}
+
 Fixed Fixed::operator*(const Fixed &rhs)
 {
 	return (toFloat() * rhs.toFloat());
@@ -84,6 +122,11 @@ Fixed Fixed::operator--()
 Fixed Fixed::operator++(int)
 {
 	save_fp++;
+	return (toFloat());
+}
+Fixed Fixed::operator--(int)
+{
+	save_fp--;
 	return (toFloat());
 }
 int Fixed::getRawBits(void) const
