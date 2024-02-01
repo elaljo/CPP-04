@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:24:41 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 18:13:58 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 19:58:09 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,63 +56,64 @@ std::ostream& operator<<(std::ostream& cout, const Fixed& copy)
 	return (cout);
 }
 
-bool	Fixed::operator>(const Fixed &rhs) const
+bool	Fixed::operator>(const Fixed &rhs)const
 {
 	if (toFloat() > rhs.toFloat())
 		return true;
 	return false;
 }
-bool	Fixed::operator<(const Fixed &rhs) const
+bool	Fixed::operator<(const Fixed &rhs)const
 {
 	if (toFloat() < rhs.toFloat())
 		return true;
 	return false;
 }
-bool	Fixed::operator>=(const Fixed &rhs) const
+bool	Fixed::operator>=(const Fixed &rhs)const
 {
 	if (toFloat() >= rhs.toFloat())
 		return true;
 	return false;
 }
-bool	Fixed::operator<=(const Fixed &rhs) const
+bool	Fixed::operator<=(const Fixed &rhs)const
 {
 	if (toFloat() <= rhs.toFloat())
 		return true;
 	return false;
 }
-bool	Fixed::operator==(const Fixed &rhs) const
+bool	Fixed::operator==(const Fixed &rhs)const
 {
 	if (toFloat() == rhs.toFloat())
 		return true;
 	return false;
 }
-bool	Fixed::operator!=(const Fixed &rhs) const
+bool	Fixed::operator!=(const Fixed &rhs)const
 {
 	if (toFloat() != rhs.toFloat())
 		return true;
 	return false;
 }
 
-Fixed Fixed::operator*(const Fixed &rhs)
+Fixed Fixed::operator*(const Fixed &rhs)const
 {
 	return (toFloat() * rhs.toFloat());
 }
-Fixed Fixed::operator+(const Fixed &rhs)
+Fixed Fixed::operator+(const Fixed &rhs)const
 {
 	return (toFloat() + rhs.toFloat());
 }
-Fixed Fixed::operator-(const Fixed &rhs)
+Fixed Fixed::operator-(const Fixed &rhs)const
 {
 	return(toFloat() - rhs.toFloat());
 }
-Fixed Fixed::operator/(const Fixed &rhs)
+Fixed Fixed::operator/(const Fixed &rhs)const
 {
 	return (toFloat() / rhs.toFloat());
 }
+
 Fixed Fixed::operator++()
 {
 	++save_fp;
-	return (toFloat());
+	return (toFloat()); 
 }
 Fixed Fixed::operator--()
 {
@@ -121,14 +122,17 @@ Fixed Fixed::operator--()
 }
 Fixed Fixed::operator++(int)
 {
-	save_fp++;
-	return (toFloat());
+	Fixed tmp(toFloat());
+	save_fp++; 
+	return (tmp.toFloat());
 }
 Fixed Fixed::operator--(int)
 {
+	Fixed tmp(toFloat());
 	save_fp--;
-	return (toFloat());
+	return (tmp.toFloat());
 }
+
 int Fixed::getRawBits(void) const
 {
 	return (save_fp);

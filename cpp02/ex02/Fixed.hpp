@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:02:20 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/01 18:11:04 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/01 20:03:32 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ class Fixed{
 		Fixed& operator=(const Fixed& copy);
 		~Fixed();
 		float toFloat(void) const;
-		bool	operator>(const Fixed &rhs) const;
-		bool	operator<(const Fixed &rhs) const;
-		bool	operator>=(const Fixed &rhs) const;
-		bool	operator<=(const Fixed &rhs) const;
-		bool	operator==(const Fixed &rhs) const;
-		bool	operator!=(const Fixed &rhs) const;
-		Fixed operator*(const Fixed &rhs);
-		Fixed operator+(const Fixed &rhs);
-		Fixed operator-(const Fixed &rhs);
-		Fixed operator/(const Fixed &rhs);
-			//pre-fix 
+		bool	operator>(const Fixed &rhs)const;
+		bool	operator<(const Fixed &rhs)const;
+		bool	operator>=(const Fixed &rhs)const;
+		bool	operator<=(const Fixed &rhs)const;
+		bool	operator==(const Fixed &rhs)const;
+		bool	operator!=(const Fixed &rhs)const;
+		Fixed operator*(const Fixed &rhs)const; 
+		Fixed operator+(const Fixed &rhs)const;
+		Fixed operator-(const Fixed &rhs)const;
+		Fixed operator/(const Fixed &rhs)const;
+			//pre-fix  
 		Fixed operator++();
 		Fixed operator--();
 			//post-fix
