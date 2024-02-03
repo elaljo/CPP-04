@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 15:30:01 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/03 15:54:02 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/03 16:02:25 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/03 17:08:18 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "I'am out of points - can't do a thing" << std::endl;
 		return;
 	}
-	std::cout << "	Before attack: Hit_points = " << Hit_points << " | Energy_points = " << Energy_points << " | Attack damage = " << Attack_damage << std::endl;
 	std::cout << "ClapTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
 	Hit_points = Hit_points - Attack_damage;
 	Energy_points--;
@@ -67,7 +66,6 @@ void	ClapTrap::attack(const std::string& target)
 		Hit_points = 0;
 	if (Energy_points < 0)
 		Energy_points = 0;
-	std::cout << "	After attack: Hit_points = " << Hit_points << " | Energy_points = " << Energy_points << " | Attack damage = " << Attack_damage << std::endl;
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {	
@@ -76,10 +74,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "I'am out of points - can't repairs myself" << std::endl;
 		return;
 	}
-	std::cout << "taking " << amount << " of damage" << std::endl;
+	std::cout << "ClapTrap: " << name << " taking " << amount << " of damage" << std::endl;
 	Hit_points -= amount;
 	Energy_points--;
-	if (Energy_points <= 0)
+	if (Energy_points <= 0) 
 		Energy_points = 0;
 	if (Hit_points <= 0)
 		Hit_points = 0;
@@ -91,11 +89,9 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "I'am out of points - can't repairs myself" << std::endl;
 		return;
 	}
-	std::cout << "	Before repairs: Hit_points = " << Hit_points << " | Energy_points = " << Energy_points << " | Attack damage = " << Attack_damage << std::endl;
 	std::cout << "ClapTrap: " << name << " repairs itself for " << amount << std::endl ;
 	Hit_points = Hit_points + amount;
 	Energy_points--;
 	if (Energy_points <= 0)
 		Energy_points = 0;
-	std::cout << "	Before repairs: Hit_points = " << Hit_points << " | Energy_points = " << Energy_points << " | Attack damage = " << Attack_damage << std::endl;
 }

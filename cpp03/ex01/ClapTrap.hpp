@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 22:18:59 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/03 14:27:41 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/03 16:04:02 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/03 18:34:33 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 
 class ClapTrap{
-	private:
+	protected:
 		std::string name;
 		int Hit_points;
 		int Energy_points;
@@ -32,4 +32,5 @@ class ClapTrap{
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 };
+
 #endif
