@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:07:16 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/03 19:05:03 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/03 23:12:27 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	ScavTrap player1;
-	
+	ScavTrap player1("p1");
+	player1.guardGate();
 	return 0;
 }
