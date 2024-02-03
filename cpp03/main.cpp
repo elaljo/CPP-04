@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:30:14 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/02 15:46:37 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/03 15:50:49 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 int main()
 {
-	
+	ClapTrap p1;
+	p1.attack("target");
+	p1.attack("target");
+	p1.attack("target");
+	p1.takeDamage(10);
+
 	return 0;
 }
