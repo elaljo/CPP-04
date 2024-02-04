@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/03 17:07:16 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:16:23 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/04 14:22:34 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/04 14:38:52 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main()
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-	ScavTrap player1("p1");
-	player1.attack("target");
-	player1.attack("target");
-	return (0);
-}
+	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap& rhs);
+		FragTrap& operator=(const FragTrap& rhs);
+		~FragTrap();
+		void	attack(const std::string& target);
+		void	highFivesGuys(void);
+};
+#endif

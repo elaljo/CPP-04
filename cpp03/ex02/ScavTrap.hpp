@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/03 17:07:16 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:16:23 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/04 14:21:25 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/04 14:21:42 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main()
+#include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ScavTrap player1("p1");
-	player1.attack("target");
-	player1.attack("target");
-	return (0);
-}
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap& rhs);
+		ScavTrap& operator=(const ScavTrap& rhs);
+		~ScavTrap();
+		void	attack(const std::string& target);
+		void	guardGate();
+};
+
+#endif
