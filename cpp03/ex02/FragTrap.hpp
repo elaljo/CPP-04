@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 14:22:34 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:38:52 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/04 15:51:33 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class FragTrap : public ClapTrap
 		FragTrap(const FragTrap& rhs);
 		FragTrap& operator=(const FragTrap& rhs);
 		~FragTrap();
-		void	attack(const std::string& target);
 		void	highFivesGuys(void);
 };
 #endif

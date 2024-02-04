@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 14:26:20 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:40:36 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/04 15:50:07 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 FragTrap::FragTrap()
 {
-	this->name = "default";
 	this->Hit_points = 100;
 	this->Energy_points = 100;
 	this->Attack_damage = 30;
 	std::cout << "FragTrap constructor called" << std::endl;
 }
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	this->name = name;
 	this->Hit_points = 100;
 	this->Energy_points = 100;
 	this->Attack_damage = 30;
@@ -49,29 +47,12 @@ FragTrap& FragTrap::operator=(const FragTrap& rhs)
 	return *this;
 }
 
-void	FragTrap::attack(const std::string& target)
-{
-	if (Hit_points <= 0 || Energy_points <= 0)
-	{
-		std::cout << "I'am out of points - can't do a thing" << std::endl;
-		return;
-	}
-	std::cout << "FragTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
-	Hit_points = Hit_points - Attack_damage;
-	Energy_points--;
-	if (Hit_points < 0)
-		Hit_points = 0;
-	if (Energy_points < 0)
-		Energy_points = 0;
-	std::cout << Hit_points << " " << Attack_damage;
-}
-
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 void	FragTrap::highFivesGuys(void)
 {
-	
+	std::cout << "high five" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:30:01 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/03 15:56:52 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/04 15:25:29 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,7 @@ void	ClapTrap::attack(const std::string& target)
 		return;
 	}
 	std::cout << "ClapTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
-	Hit_points = Hit_points - Attack_damage;
 	Energy_points--;
-	if (Hit_points < 0)
-		Hit_points = 0;
-	if (Energy_points < 0)
-		Energy_points = 0;
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {	
@@ -77,10 +72,6 @@ void ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "ClapTrap: " << name << " taking " << amount << " of damage" << std::endl;
 	Hit_points -= amount;
 	Energy_points--;
-	if (Energy_points <= 0) 
-		Energy_points = 0;
-	if (Hit_points <= 0)
-		Hit_points = 0;
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
@@ -92,6 +83,4 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap: " << name << " repairs itself for " << amount << std::endl ;
 	Hit_points = Hit_points + amount;
 	Energy_points--;
-	if (Energy_points <= 0)
-		Energy_points = 0;
 }

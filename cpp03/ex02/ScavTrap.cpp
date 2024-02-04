@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 14:21:23 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:22:12 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/04 15:50:56 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 ScavTrap::ScavTrap()
 {
 	std::cout << "ScavTrap constuctor called" << std::endl;
-	this->name = "Default";
 	this->Hit_points = 100;
 	this->Energy_points = 50;
 	this->Attack_damage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	this->name = name;
 	this->Hit_points = 100;
 	this->Energy_points = 50;
 	this->Attack_damage = 20;
@@ -64,11 +62,6 @@ void	ScavTrap::attack(const std::string& target)
 	std::cout << "ScavTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
 	Hit_points = Hit_points - Attack_damage;
 	Energy_points--;
-	if (Hit_points < 0)
-		Hit_points = 0;
-	if (Energy_points < 0)
-		Energy_points = 0;
-	std::cout << Hit_points << " " << Attack_damage;
 }
 void	ScavTrap::guardGate()
 {

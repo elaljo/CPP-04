@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:25:42 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/04 14:15:27 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/04 15:34:39 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ ScavTrap::ScavTrap()
 	this->Attack_damage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name) // if i use base constructor here like (claptrap(name)) does other atributes also get init from base constructor such as hit_p energy_p or only who i write in param.. 
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	this->name = name;
 	this->Hit_points = 100;
 	this->Energy_points = 50;
 	this->Attack_damage = 20;
@@ -62,13 +61,7 @@ void	ScavTrap::attack(const std::string& target)
 		return;
 	}
 	std::cout << "ScavTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
-	Hit_points = Hit_points - Attack_damage;
 	Energy_points--;
-	if (Hit_points < 0)
-		Hit_points = 0;
-	if (Energy_points < 0)
-		Energy_points = 0;
-	std::cout << Hit_points << " " << Attack_damage;
 }
 void	ScavTrap::guardGate()
 {
