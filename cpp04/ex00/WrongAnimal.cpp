@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 23:32:59 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/05 13:22:06 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/05 13:30:21 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/05 13:35:38 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "WrongAnimal.hpp"
 
-#include "Animal.hpp"
-
-class Cat : public Animal
+WrongAnimal::WrongAnimal()
 {
-	public:
-		Cat();
-		~Cat();
-		void	makeSound()const ;
-		std::string getType()const ;
-};
-#endif
+	std::cout << "WrongAnimal constructor called" << std::endl;
+}
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "WrongAnimal destructor called" << std::endl;
+}
+void	WrongAnimal::makeSound()const
+{
+	std::cout << "I'am the wrong cat - (BAA3)" << std::endl;
+}

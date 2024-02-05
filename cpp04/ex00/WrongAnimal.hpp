@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 23:32:59 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/05 13:22:06 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/05 13:42:58 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/05 13:42:59 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
+#include <iostream>
+#include <string>
 
-class Cat : public Animal
-{
+class WrongAnimal{
+	protected:
+		std::string type;
 	public:
-		Cat();
-		~Cat();
-		void	makeSound()const ;
-		std::string getType()const ;
+		WrongAnimal();
+		~WrongAnimal();
+		void	makeSound() const;
 };
 #endif

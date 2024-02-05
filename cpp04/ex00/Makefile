@@ -9,11 +9,15 @@ RM = rm -rf
 HEADER = Animal.hpp\
 					Cat.hpp\
 					Dog.hpp\
+					WrongCat.hpp\
+					WrongAnimal.hpp\
 
 SRC = main.cpp\
 			Animal.cpp\
 			Cat.cpp\
 			Dog.cpp\
+			WrongCat.cpp\
+			WrongAnimal.cpp\
 			
 
 OBJS := $(SRC:.cpp=.o)
