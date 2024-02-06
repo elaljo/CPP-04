@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:44:55 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/05 13:22:08 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/06 11:57:14 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class Dog : public Animal
 {
 	public:
 		Dog();
+		Dog(const Dog& rhs);
+		Dog&	operator=(const Dog& rhs);
 		~Dog();
 		void	makeSound()const; 
 		std::string getType()const ;

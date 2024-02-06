@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:41:24 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/05 15:19:42 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/05 18:36:07 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int main()
 	j->makeSound();
 	meta->makeSound();
 	//w->makeSound();
-	//delete meta;
 	delete i;
-	delete j;
+	delete j; 
+	delete meta;
 	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:41:41 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/05 13:44:32 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/06 11:58:13 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class WrongCat : public WrongAnimal
 		std::string type;
 	public:
 		WrongCat();
+		WrongCat(const WrongCat& rhs);
+		WrongCat&	operator=(const WrongCat& rhs);
 		~WrongCat();
 		void	makeSound() const;
 };
