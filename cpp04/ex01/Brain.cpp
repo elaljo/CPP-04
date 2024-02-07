@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 23:31:44 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/06 17:00:04 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/06 16:18:01 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/06 18:17:41 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-
+#include "Brain.hpp"
 #include <iostream>
-#include <string>
 
-class Animal{
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(const Animal& rhs);
-    Animal& operator=(const Animal& rhs);
-		virtual	~Animal();
-		virtual void	makeSound() const;
-		std::string getType()const ;
-};
+Brain::Brain()
+{
+	std::cout << "Brain constructor called" << std::endl;
+}
+//Brain::Brain(const Brain& rhs)
+//{
+//	std::cout << "Brain Copy Constructor called" << std::endl;
+//}
+//Brain& Brain::operator=(const Brain& rhs)
+//{
+//  std::cout << "Brain Copy Assignment operator called" << std::endl;
+//  return *this;
+//}
 
-#endif
+Brain::~Brain()
+{
+	std::cout << "Brain destructor called" << std::endl;
+}

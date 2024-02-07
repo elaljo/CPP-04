@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:31:44 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/06 17:00:04 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/06 16:57:31 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal{
 		Animal();
 		Animal(const Animal& rhs);
     Animal& operator=(const Animal& rhs);
-		virtual	~Animal();
+		virtual ~Animal();
 		virtual void	makeSound() const;
 		std::string getType()const ;
 };
