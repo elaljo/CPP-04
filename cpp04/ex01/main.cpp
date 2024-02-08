@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:41:24 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:04:11 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 17:03:37 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ void init()
 }
 int main()
 {
-	init();
+	//init();
+	Dog basic;
+	Dog tmp = basic;
 	//system("leaks -q Polymorphism");
 	return (0);
 }

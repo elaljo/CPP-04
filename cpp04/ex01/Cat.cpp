@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:37:46 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:05:48 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 17:04:14 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat()
 }
 Cat::Cat(const Cat& rhs)
 {
+	brain = new Brain;
 	std::cout << "Cat Copy Constructor called" << std::endl;
 	*this = rhs;
 }

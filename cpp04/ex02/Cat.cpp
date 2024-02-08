@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:37:46 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:08:47 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 17:04:50 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ Cat::Cat()
 }
 Cat::Cat(const Cat& rhs)
 {
-	*this = rhs;
 	std::cout << "Cat Copy Constructor called" << std::endl;
+	brain = new Brain;
+	*this = rhs;
 }
 Cat& Cat::operator=(const Cat& rhs)
 {

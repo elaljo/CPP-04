@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:46:24 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:04:55 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 17:03:59 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Dog::Dog()
 }
 Dog::Dog(const Dog& rhs)
 {
+	brain = new Brain;
 	std::cout << "Dog Copy Constructor called" << std::endl;
 	*this = rhs;
 }
