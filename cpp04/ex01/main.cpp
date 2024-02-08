@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:41:24 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/06 16:57:14 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 15:04:11 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,30 @@
 #include "Animal.hpp"
 #include "WrongCat.hpp"
 
-int main()
+void init()
 {
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-
+	
+	//{
+	//	const Animal* x[6];
+	//	for(int i = 0; i < 6; i++)
+	//	{
+	//		if (i < 3)
+	//			x[i] = new Cat; 
+	//		else
+	//			x[i] = new Dog;
+	//	}
+	//		for(int i = 0; i < 6; i++)
+	//			delete x[i];
+	//}
+	
 	delete j;
 	delete i;
-	return 0;
+}
+int main()
+{
+	init();
+	//system("leaks -q Polymorphism");
+	return (0);
 }

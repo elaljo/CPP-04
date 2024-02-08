@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 23:46:24 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:04:55 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/04 23:37:46 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/08 15:08:47 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog()
+Cat::Cat()
 {
-	std::cout << "Dog constructor called" << std::endl;
-	type = "Dog";
+	type = "Cat";
+	std::cout << "Cat constructor called" << std::endl;
 	brain = new Brain();
 }
-Dog::Dog(const Dog& rhs)
+Cat::Cat(const Cat& rhs)
 {
-	std::cout << "Dog Copy Constructor called" << std::endl;
 	*this = rhs;
+	std::cout << "Cat Copy Constructor called" << std::endl;
 }
-Dog& Dog::operator=(const Dog& rhs)
+Cat& Cat::operator=(const Cat& rhs)
 {
-  std::cout << "Dog Copy Assignment operator called" << std::endl;
+  std::cout << "Cat Copy Assignment operator called" << std::endl;
 	if (this != &rhs)
 	{
 		*brain = *rhs.brain;
-		this->type = rhs.type;
+		this->type = type;
 	}
   return *this;
 }
-
-Dog::~Dog()
+Cat::~Cat()
 {
 	delete brain;
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Cat destructor called" << std::endl;
 }
-void	Dog::makeSound()const
-{ 
-	std::cout << "Bark Bark" << std::endl;
+
+void	Cat::makeSound() const
+{
+	std::cout << "Miaow.." << std::endl;
 }
-std::string Dog::getType() const
+std::string Cat::getType() const
 {
 	return type;
 }

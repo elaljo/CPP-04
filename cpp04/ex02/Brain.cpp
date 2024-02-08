@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:18:01 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/08 15:05:41 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 15:08:35 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Brain::Brain()
 }
 Brain::Brain(const Brain& rhs)
 {
-	std::cout << "Brain Copy Constructor called" << std::endl;
 	*this = rhs;
+	std::cout << "Brain Copy Constructor called" << std::endl;
 }
 Brain& Brain::operator=(const Brain& rhs)
 {

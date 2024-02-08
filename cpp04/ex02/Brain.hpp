@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 23:44:55 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/07 15:36:05 by moelalj          ###   ########.fr       */
+/*   Created: 2024/02/06 16:18:04 by moelalj           #+#    #+#             */
+/*   Updated: 2024/02/08 15:02:24 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <string>
 
-class Dog : public Animal
+class Brain
 {
 	private:
-		Brain* brain;
+		std::string ideas[100];
 	public:
-		Dog();
-		Dog(const Dog& rhs);
-		Dog&	operator=(const Dog& rhs);
-		~Dog();
-		void	makeSound()const; 
-		std::string getType()const ;
+		Brain();
+		Brain(const Brain& rhs);
+		Brain&	operator=(const Brain& rhs);
+		~Brain();
 };
 #endif

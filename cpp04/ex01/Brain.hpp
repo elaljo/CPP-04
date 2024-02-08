@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:18:04 by moelalj           #+#    #+#             */
-/*   Updated: 2024/02/06 18:17:37 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/02/08 15:02:16 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 
 class Brain
 {
+	private:
+		std::string ideas[100];
 	public:
-		std::string* ideas[100];
 		Brain();
-		//Brain(const Brain& rhs);
-		//Brain&	operator=(const Brain& rhs);
+		Brain(const Brain& rhs);
+		Brain&	operator=(const Brain& rhs);
 		~Brain();
 };
 #endif
